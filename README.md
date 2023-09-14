@@ -56,6 +56,7 @@ function new_section (){
 ```
 
 ### Etiquetas para usar en la entradas y paginas
+
 ```html
 <?php echo firs_image(); ?> Primera imagen del posts 
 <?php the_post_thumbnail(); ?> Miniatura
@@ -105,8 +106,10 @@ function new_section (){
 
 ### Añadir logo
 
+```html
 <!-- logo -->
 <?php the_custom_logo(); ?>
+```
 
 ### Añadir menu
 ```html
