@@ -13,10 +13,11 @@ Muy bien abajo dejare una lista de las etiquetas y codigo utiles para usar. Todo
 los datos los puedes usar para crear tu temas.
 
 ### Etiqueta de estructura
-
+```html
 <?php get_header(); ?> Con esta etiqueta sirve para mostrar el header en otra secciones
 <?php get_sidebar(); ?> Mostrar barra literal
 <?php get_footer(); ?> Mostrar pie de pagina
+```
 
 ### Agregar recursos
 ```html
@@ -26,18 +27,21 @@ los datos los puedes usar para crear tu temas.
 ```
 
 ### Etiquetas globales
-
+```html
 <?php echo esc_url(home_url('/'));?><!-- Url home -->
 <?php echo get_option('home'); ?> <!-- url -->
 <?php bloginfo( 'name' ); ?><!-- Name blog -->
+```
 
 ### Etiquetas para las categorias
-
+```html
 <?php single_cat_title(); ?> <!-- titulo de categorias -->
 <?php echo category_description(); ?> <!-- descripcion -->
+```
 
 ### Agregar sidebar y secciones para añadir widgets
 
+```html
 add_action( 'widgets_init' , 'new_section');
 function new_section (){
 	register_sidebar( array(
@@ -49,9 +53,10 @@ function new_section (){
 
 <!-- Salida -->
 <?php dynamic_sidebar('new-nombre'); ?>
+```
 
 ### Etiquetas para usar en la entradas y paginas
-
+```html
 <?php echo firs_image(); ?> Primera imagen del posts 
 <?php the_post_thumbnail(); ?> Miniatura
 <?php the_excerpt(); ?> descripcion
@@ -68,10 +73,10 @@ function new_section (){
 <?php the_author(); ?> Author del posts 
 <?php the_author_posts(); ?>  Todos los artículos de un autor
 <?php the_author_posts_link();?> Links de los artículos de un autor
-
+```
 
 ### Condicionales if , else
-
+```html
 <?php if() : ?> Si
 <?php else : ?> Caso contrario
 <?php endif; ?> fin de condicion
@@ -87,15 +92,16 @@ function new_section (){
 <?php if (is_front_page()); ?> pagina frontal
 <?php if(is_attachment()); ?> archivo adjunto
 <?php if(is_dynamic_sidebar()): ?> Sidebar dinamico
-
+```
 
 ### Etiquetas head y footer
-
+```html
 <!-- Metatags wordpress -->
 <?php wp_head(); ?> Funciona para agregar metadatos.
 
 <!-- plugins-wp -->
 <?php wp_footer(); ?> Funciona para mejorar la compatibilidad con plugins ademas de agregar la barra de wordpress
+```
 
 ### Añadir logo
 
@@ -103,30 +109,32 @@ function new_section (){
 <?php the_custom_logo(); ?>
 
 ### Añadir menu
-
+```html
 <!-- menu -->
 <?php wp_nav_menu() ?>
+```
 
 ### Añadir Paginacion
-
+```html
 <?php echo paginate_links(); ?> Añadir paginacion numerica
 <?php previous_post_link(); ?> Boton anterior
 <?php next_post_link(); ?> Boton de siguiente
+```
 
 ### Agrega un formulario de contacto
-
+```html
 <form class="search" method="get" action="<?php echo esc_url(home_url()); ?>">
 <div role="search">
 <input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php esc_html_e('BUSQUEDA RAPIDA'); ?>">
 <button class="search-submit" type="submit"><?php esc_html_e('Search'); ?></button>
   </div>
 </form>
+```
 
 ## Conclucion
 
 > Muchas gracias por leer, si te ha servido no olvides compartir. Si tienes
 dudas puedes escribirme a mi facebook **www.m.me/framber.ereu**
-
 
 ## Donar
 
