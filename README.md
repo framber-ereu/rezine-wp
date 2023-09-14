@@ -19,9 +19,11 @@ los datos los puedes usar para crear tu temas.
 <?php get_footer(); ?> Mostrar pie de pagina
 
 ### Agregar recursos
+```html
 <?php get_stylesheet_directory_uri().'/url'; ?  añadir CSS
 <?php get_template_directory_uri().'/src'; ?> Añadir Javascript
 <?php get_template_part(''); ?> Añadir template
+```
 
 ### Etiquetas globales
 
